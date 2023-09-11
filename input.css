@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { 
+   font-family: 'Be Vietnam Pro', sans-serif;
+   background-image: url('../img/bg-tablet-pattern.svg');
+   background-repeat: no-repeat;
+   background-size: 800px;
+   background-position: 90% -25%;
+}
+
+#cta {
+   background-image: url('../img/bg-simplify-section-desktop.svg')  ;
+   background-repeat: no-repeat;
+}
+@media (max-width:576px) {
+   body {
+      background-position: 60px -1%;
+      background-size: 480px;
+   }
+   #cta {
+      background-image: url('../img/bg-simplify-section-mobile.svg')  ;
+      background-repeat: no-repeat;
+   }
+}
+#nav-menu{transition: display 0.35s;}
+#hamburger {
+   width: 24px;
+   height: 24px;
+   position: relative;
+   cursor: pointer;
+   transition: rotate 0.25s;
+}
+#hamburger .ham-line {
+   position: absolute;
+   width: 100%;
+   height: 2px;
+   background-color: #000;
+   transition: all 0.5s;
+}
+.ham-line.mid {
+   transform: translateY(6px);
+}
+.ham-line.bot {
+   transform: translateY(12px);
+}
+.open .ham-line.top{
+   transform: rotate(45deg) translate(6px,6px);
+}
+.open .ham-line.mid{
+   display: none;
+}
+.open .ham-line.bot{
+   transform: rotate(-45deg) translate(-6px,6px);
+}
